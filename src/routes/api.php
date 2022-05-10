@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/domains', [DomainController::class, 'index']);
 Route::get('/cloudflare/domains', [\App\Http\Controllers\Api\v1\Cloudflare\DomainController::class, 'index']);
 Route::get('/cloudflare/accounts', [\App\Http\Controllers\Api\v1\Cloudflare\AccountController::class, 'index']);
+Route::post('/cloudflare/accounts', [\App\Http\Controllers\Api\v1\Cloudflare\AccountController::class, 'store']);
